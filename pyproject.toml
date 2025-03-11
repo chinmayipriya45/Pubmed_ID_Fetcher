@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pubmed-paper-fetcher"
+version = "0.1.0"
+description = "Fetch research papers from PubMed with author filtering"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+packages = [{ include = "pubmed_fetcher" }] 
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.26.0"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_fetcher.fetcher:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
